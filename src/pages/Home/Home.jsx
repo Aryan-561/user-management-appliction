@@ -9,22 +9,20 @@ function Home() {
   const users = useSelector((state) => state.usersInfo);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  useEffect(()=>{
     const fetchUsers = async () => {
-      const data = await userService.getAllUsers();
-
-      localStorage.setItem("users", JSON.stringify(data));
+        try {
+            const data = await userService.getAllUsers();
+            dispatch(getData(data));
+        } catch (error) {
+            console.error("Failed to fetch users:", error);
+        }
     };
 
-    const userLocal = JSON.parse(localStorage.getItem("users"));
-
-    if (userLocal && userLocal.length > 0) dispatch(getData(userLocal));
-    else fetchUsers();
-  }, []);
-
-  useEffect(() => {
-    if (users?.length > 0) localStorage.setItem("users", JSON.stringify(users));
-  }, [users]);
+    if(users.length === 0){
+        fetchUsers()
+    }
+  })
 
   return (
     <>
