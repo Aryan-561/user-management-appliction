@@ -1,8 +1,26 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# User Management Application
 
-Currently, two official plugins are available:
+This is a simple User Management Application built with React and JSONPlaceholder API (Fake API). Throught which access all users, create,update and delete user details.
+It's application work as real-world application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Link
+<a href='https://user-management-appliction.vercel.app/'>User Management Application</a>
+
+## Technologies Used
+
+- React Js
+- Redux Js
+- React Router
+- TailwindCSS
+- <a href='https://jsonplaceholder.typicode.com/'> JSONPlaceholder (Free Fake API)</a>
+
+## Preview Image
+![localhost_5173_users](https://github.com/user-attachments/assets/6687cbd4-aaf1-417f-bf00-e59876a0aa31)
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+
